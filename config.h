@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
@@ -10,8 +10,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
-static const char *fonts[]          	 = { "Terminus:size=14" };
-static const char dmenufont[]       	 =	 "Terminus:size=14"  ;
+static const char *fonts[]          	 = { "Terminus:size=16" };
+static const char dmenufont[]       	 =	 "Terminus:size=16"  ;
 static const char lu_chan[]       	 	 = "lu_chan_:";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -34,7 +34,10 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+/* static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; */
+
+/*static const char *tags[] = { "Web [1]", "Code [2]", "Terminal [3]", "Misc [4]", "Media [5]", "Notes [6]" };*/
+static const char *tags[] = { "[1]Web", "[2]Code", "[3]Terminal", "[4]Misc", "[5]Media", "[6]Notes" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -85,7 +88,7 @@ static const char *termcmd[]            = { "xterm", NULL };
 static const char *termuxcmd[]          = { "xfce4-terminal", NULL };
 static const char *lockcmd[]            = { "i3lock-fancy", NULL };
 static const char *browsercmd[]         = { "browser_chooser", NULL };
-static const char *filecmd[]            = { "pcmanfm",  NULL };
+static const char *filecmd[]            = { "pcmanfm", "-n", NULL };
 static const char *cmdsoundup[]         = { "amixer", "-q", "sset", "Master", "5%+", NULL };
 static const char *cmdsounddown[]       = { "amixer", "-q", "sset", "Master", "5%-", NULL };
 static const char *cmdsoundtoggle[] 	= { "amixer", "-q", "sset", "Master", "toggle", NULL };

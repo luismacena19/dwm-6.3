@@ -1,0 +1,5 @@
+# Excluding build files
+
+dwm
+dwm.o
+config.h
